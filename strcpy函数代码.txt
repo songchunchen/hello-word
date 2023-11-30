@@ -1,0 +1,12 @@
+#include <stdio.h>  
+#include <stdlib.h>  
+#include <string.h>  
+  
+char* StrCpy(char* src) {  
+    int len = strlen(src); // 计算src的长度  
+    char* dest = (char*) malloc((len + 1) * sizeof(char)); // 用malloc申请长度为Len+1的内存空间  
+    strcpy(dest, src); // 将src字符串逐个字符复制到新申请的内存空间  
+    dest[len] = '\0'; // 新申请的内存空间的最后一位放‘\0’  
+    return dest; // 返回新申请的内存空间指针  
+  free(dest);
+}
